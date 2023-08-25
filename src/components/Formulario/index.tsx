@@ -28,7 +28,7 @@ const Formulario = () => {
         />
       </div>
 
-      <Botao />
+      <Botao>Adicionar</Botao>
     </form>
   )
 }

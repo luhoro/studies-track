@@ -1,7 +1,11 @@
-import style from  './Botao.module.scss'
+import style from './Botao.module.scss'
 
-const Botao = () => {
-  return <button className={style.botao}>Botão</button>
+const Botao = ({children}: {children: string}) => {
+  return (
+  <button className={style.botao}>
+    {children}
+  </button>
+  )
 }
 
 export default Botao
