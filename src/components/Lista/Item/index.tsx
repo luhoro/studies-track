@@ -1,9 +1,10 @@
+import { ITarefa } from '../../../types/tarefa'
 import style from '../Lista.module.scss'
 
-const Item = ({ nome, tempo }: { nome: string, tempo: string }) => {
+const Item = ({ tarefa, tempo, selecionado, completado, id }: ITarefa) => {
   return (
     <li className={style.item}>
-      <h3> {nome} </h3>
+      <h3> {tarefa} </h3>
       <span> {tempo} </span>
     </li>
   )
