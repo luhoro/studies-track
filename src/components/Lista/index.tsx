@@ -1,4 +1,4 @@
-import {ITarefa} from '../../types/tarefa'
+import {ITarefa} from '../../types/ITarefa'
 import Item from './Item'
 import style from './Lista.module.scss'
 
