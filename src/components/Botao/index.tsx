@@ -1,18 +1,20 @@
 import style from './Botao.module.scss'
 
-interface TypeBotao {
-  children: string
-  type?: "button" | "submit" | "reset" | undefined
+interface Props {
+  children: React.ReactNode // o tipo do children
+  type?: "button" | "submit" | "reset" | undefined 
   onClick?: () => void
 }
 
-const Botao = (props: TypeBotao) => {
-  const { type = "button", onClick } = props
-
+const Botao = ({children, type = 'button', onClick}: Props) => {
   return (
-  <button onClick={onClick} type={type} className={style.botao}>
-    {props.children}
-  </button>
+    <button
+      onClick={onClick}
+      type={type}
+      className={style.botao}
+    >
+      {children}
+    </button>
   )
 }
 
