@@ -1,9 +1,10 @@
 import React, { useState} from 'react'
-import Formulario from '../Formulario'
-import Lista from '../Lista'
+import Formulario from 'components/Formulario'
+import Lista from 'components/Lista'
 import style from './App.module.scss'
-import Cronometro from '../Cronometro'
-import {ITarefa} from '../../types/ITarefa'
+import Cronometro from 'components/Cronometro'
+import Header from 'components/Header'
+import {ITarefa} from 'types/ITarefa'
 
 export const App = () => {
   const [tarefas, setTarefas] = useState<ITarefa[] | []>([])
@@ -32,14 +33,15 @@ export const App = () => {
 
   return (
     <div className={style.AppStyle}>
+      <Header />
       <Formulario setTarefas={setTarefas} />
-      <Lista
-        tarefas={tarefas}
-        selecionaTarefa={selecionaTarefa}
-      />
       <Cronometro
         selecionado={selecionado}
         finalizarTarefa={finalizarTarefa}
+      />
+      <Lista
+        tarefas={tarefas}
+        selecionaTarefa={selecionaTarefa}
       />
     </div>
   )

@@ -12,12 +12,12 @@ export default function Relogio({ tempo = 0 }: Props) {
   const [segundoDezena, segundoUnidade] = String(segundos).padStart(2, '0')
 
   return (
-    <>
+    <div className={style.relogio}>
       <span className={style.relogioNumero}>{minutoDezena}</span>
       <span className={style.relogioNumero}>{minutoUnidade}</span>
       <span className={style.relogioDivisao}>:</span>
       <span className={style.relogioNumero}>{segundoDezena}</span>
       <span className={style.relogioNumero}>{segundoUnidade}</span>
-    </>
+    </div>
   )
 }

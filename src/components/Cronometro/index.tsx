@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import Botao from "../Botao";
+import Botao from "components/Botao";
 import Relogio from "./Relogio";
 import style from './Cronometro.module.scss';
-import { tempoParaSegundos } from "../../common/utils/time";
-import { ITarefa } from "../../types/ITarefa";
+import { tempoParaSegundos } from "common/utils/time";
+import { ITarefa } from "types/ITarefa";
 
 interface Props {
   selecionado: ITarefa | undefined
@@ -31,10 +31,8 @@ export default function Cronometro({selecionado, finalizarTarefa}: Props) {
 
   return (
     <div className={style.cronometro}>
-      <p className={style.titulo}>Escolha um card e inicie o Cronômetro</p>
-      <div className={style.relogioWrapper}>
-        <Relogio tempo={tempo} />
-      </div>
+      <h3 className={style.titulo}>Escolha um card e inicie o cronômetro</h3>
+      <Relogio tempo={tempo} />
       <Botao onClick={() => regressiva(tempo)}>
         Começar!
       </Botao>

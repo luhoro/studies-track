@@ -1,29 +1,20 @@
-.relogioNumero {
-  background-color: #5D677C;
-  box-shadow: 2px 2px 4px #2B2B2B inset;
-  height: 3.6rem;
-  width: 3rem;
-  padding: 8px 4px;
-  border-radius: 10px;
+.relogio {
   display: flex;
+  gap: .5rem;
   align-items: center;
-  justify-content: center;
-  font-size: 4rem;
 
-  @media screen and (min-width:1280px) {
-    font-size: 8rem;
-    height: 10.8rem;
-    width: 9rem;
+  .relogioNumero {
+    background-color: #f0f0f0;
+    border-radius: .4rem;
+    width: 50px;
+    height: 60px;
   }
-}
 
-.relogioDivisao {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 4.2rem;
-
-  @media screen and (min-width:1280px) {
-    height: 12.6rem;
+  .relogioNumero,
+  .relogioDivisao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
   }
 }

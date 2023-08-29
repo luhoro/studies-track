@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  .logo {
+    width: 50px;
+    opacity: 70;
+    filter: opacity(70%);
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+}

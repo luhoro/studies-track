@@ -1,4 +1,4 @@
-import { ITarefa } from '../../../types/ITarefa'
+import { ITarefa } from 'types/ITarefa'
 import style from './Item.module.scss'
 
 interface Props extends ITarefa {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ITarefa } from '../../types/ITarefa';
-import Botao from '../Botao';
+import { ITarefa } from 'types/ITarefa';
+import Botao from 'components/Botao';
 import style from './Formulario.module.scss';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -40,7 +40,7 @@ export const Formulario = ({ setTarefas }: Props) => {
         id="tarefa"
         value={tarefa}
         onChange={evento => setTarefa(evento.target.value)}
-        placeholder="O que você quer estudar"
+        placeholder="O que você quer estudar?"
         required
       />
     </div>
